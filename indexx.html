@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog Post Slider</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider-container {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="blog1.jpg" alt="Blog Post 1">
+                <h2>Blog Post 1</h2>
+                <p>This is the content of Blog Post 1.</p>
+            </div>
+            <div class="slide">
+                <img src="blog1.jpg" alt="Blog Post 1">
+                <h2>Blog Post 1</h2>
+                <p>This is the content of Blog Post 1.</p>
+            </div>
+            <div class="slide">
+                <img src="blog1.jpg" alt="Blog Post 1">
+                <h2>Blog Post 1</h2>
+                <p>This is the content of Blog Post 1.</p>
+            </div>
+            
+            <!-- Repeat the following block for each blog post -->
+            <!-- Blog Post 2 -->
+            <!-- Blog Post 3 -->
+            <!-- ... -->
+            <!-- Blog Post 10 -->
+        </div>
+        <div class="navigation">
+            <div class="prev" onclick="prevSlide()">&#10094;</div>
+            <div class="next" onclick="nextSlide()">&#10095;</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
